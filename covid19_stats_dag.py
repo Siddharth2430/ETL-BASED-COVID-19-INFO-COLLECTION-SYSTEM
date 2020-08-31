@@ -24,11 +24,11 @@ from finalstats import final_stats
 
 # define default arguments
 default_args = {
-	'owner': 'siddharth',
+	'owner': 'owner_name',
 	'start_date': days_ago(4),
     'depends_on_past': False,
     'retries': 1,
-    # 'email':['worldhacker2430@gmail.com'],
+    # 'email':['your_mail'],
     # 'email_on_success':True,
     'retry_delay': timedelta(minutes=10)
 }
