@@ -6,8 +6,8 @@ from google.oauth2 import service_account
 import csv
 
 # setting the auth variables
-credentials = service_account.Credentials.from_service_account_file('/mnt/e/soft/python/bg-key/covidstats-280622-2ee84be68244.json')
-project_id = 'covidstats-280622'
+credentials = service_account.Credentials.from_service_account_file('key_file_location/key_file.json')
+project_id = 'project_id'
 
 # initiating the client
 client = bigquery.Client(credentials = credentials, project = project_id)
@@ -28,7 +28,7 @@ def final_stats():
         csv_count -= 1
         date = row[0]
     # Reading BQ data for comparison
-    SQL = client.query("""SELECT * FROM `covidstats-280622.covidstats.covid_data` where date = '"""+date+"""'""")
+    SQL = client.query("""SELECT * FROM `project_id.dataset.table` where date = '"""+date+"""'""")
     result = SQL.result()
     BQ_count = int(result.total_rows)
     # Calculating the Upload Percentage
