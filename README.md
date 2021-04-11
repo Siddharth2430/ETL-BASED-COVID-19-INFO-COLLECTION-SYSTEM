@@ -1,7 +1,7 @@
 # ETL BASED COVID-19 INFO COLLECTION SYSTEM
 A python application to fetch covid-19 everyday data and feed it into Google BigQuery Dataset Automatically Using Apache Airflow 
 
-_to Run This Project_
+_To Run This Project_
 
 # Clone or download this Repository
 
